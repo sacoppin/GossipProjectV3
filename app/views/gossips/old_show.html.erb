@@ -1,0 +1,27 @@
+<body>
+ <h1 class="header"> La page du gossip </h1>
+
+  <div class="container">
+    <div class="card">
+     <div class="card-header">
+      <h3> Titre : <%= @gossips.title %> </h3>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title"> Le contenu : <%= @gossips.content %> </h4>
+      <hr class="my-4">
+      <p class="card-text">
+        <ul>
+          <li> Date de création : <%= @gossips.created_at %> </li>
+          <li> Potin n° : <%= @gossips.id %> </li>
+          <li> Auteur : <%= @gossips.user.first_name %> <%=@gossips.user.last_name%> </li>
+          <li> Ville : <%= @gossips.user.city.name %> </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+  <div class="container text-center">
+    <a class="btn btn-outline-dark" href= <%= user_path(@gossips.user.id) %>> A propos de l'auteur </a>
+  </div>
+  
+
+</body>

@@ -1,0 +1,25 @@
+<body class="text-center">
+  <!-- Alerts / Flash messages -->
+  <% flash.each do |key, msg| %>
+    <div class="alert alert-<%=key%> text-center" role="alert">
+      <%= msg %>
+    </div>
+  <% end %>
+  <body>
+
+  <h1 class="header">Formulaire de création du potin</h1>
+
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+  <div class="form-group">
+  <label for="Title">Titre du Gossip</label>
+    <%= text_field_tag 'title' %>
+  </div>
+    <label for="Content">Le contenu</label>
+    <%= text_area_tag 'content' %>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-black">Submit</button>
+
+<% end %>
+
+</body>

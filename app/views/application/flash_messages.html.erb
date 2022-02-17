@@ -1,0 +1,5 @@
+<% flash.each do |gossip, msg| %>
+  <div flash='alert alert-<%= gossip %'>
+  <%= msg %>
+  </div>
+<% end %>

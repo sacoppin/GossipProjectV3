@@ -1,0 +1,18 @@
+<body>
+  <div class="container">
+    <h1>A propos de <%= @users.first_name %></h1>
+    <ul>
+        <li> Prénom : <%= @users.first_name %></li>
+        <li> Nom : <%= @users.last_name %></li>
+        <li> Age : <%= @users.age %> ans</li>
+        <li> Email : <%= @users.email %></li>
+        <li> Ville : <%= @users.city.name %> <%= @users.city.zip_code %></li>
+        <li> Nombre de gossips : <%= @users.gossips.count %> gossip(s)</li>
+        <li><a class="btn btn-outline-secondary btn-sm" role="button" href="<%=city_path(@users.city_id) %>">Voir les gossips de <%=@users.city.name%></a></li>
+    </ul>
+  </div>
+  <br/>
+  <div class="container text-center">
+    <a class="btn btn-outline-dark" role="button" <%= link_to "Revenir à l'accueil", root_path %></a>
+  </div>
+</body>

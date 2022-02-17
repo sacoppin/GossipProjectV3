@@ -1,0 +1,16 @@
+
+  <div class="jumbotron">
+  <h2>bonjour1</h2>
+<%=  @gossips.each do |gossip| %>
+<p class="card-text"><em><%= gossip.user.first_name %> à parler de  "<%= gossip.title %>"  </em></p>
+<a href="gossips/<%=gossip.id%>" class="btn btn-primary">Voir le potin</a>
+<p>bonjour2</p>
+<a href="firstname/<%=gossip.id%>" class="btn btn-primary">Voir l'auteur'</a>
+  <% end %>
+  <h3>bonjour3</h3>
+ <h2>  voici les derniers potins:  </h2>
+ </div>
+ 
+
+
+
